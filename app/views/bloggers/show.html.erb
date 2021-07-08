@@ -1,0 +1,10 @@
+<h1>Blogger Show Page</h1>
+
+<div>
+    <% @blogger.posts.each do |post| %>
+        <li><%= link_to post.title, post_path(post) %> | <%= post.likes %></li>
+    <% end %>
+    <br>
+    <p><%= link_to "Most Featured post", post_path(@blogger.featured_post) %></p>
+</div>
+
